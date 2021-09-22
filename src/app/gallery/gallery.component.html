@@ -1,0 +1,10 @@
+<div class="container">
+  <p>Bacite oko na neke od naših najprodavanijih modela automobila!</p>
+  <div class="gallery">
+    <div *ngFor="let image of images" [style.gridRow]="image.row" [style.gridCol]="image.col" class="image">
+      <img [src]="image.url" alt="">
+      <span></span>
+
+    </div>
+  </div>
+</div>

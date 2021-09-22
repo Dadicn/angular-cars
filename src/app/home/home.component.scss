@@ -1,0 +1,25 @@
+.hero {
+    background-color: rgb(139, 101, 101);
+    height: 100%;
+    background-image: url('/assets/cars.jpeg') !important;
+    background-size: cover;
+    background-position: center center;
+}
+
+.title {
+    font-size: 86px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+    line-height: 100px;
+    padding-top: 100px;
+    
+}

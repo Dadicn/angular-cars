@@ -1,0 +1,35 @@
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Kontaktirajte nas!</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+       
+        
+        <form (ngSubmit)="submitForm()">
+
+        <div class="field">
+            <label class="label">Ime</label>
+            <input type="text" name="name" class="input" [(ngModel)]="name">
+        </div>
+
+        <div class="field">
+            <label class="label">Email</label>
+            <input type="email" name="email" class="input" [(ngModel)]="email">
+        </div>
+
+        <div class="field">
+            <label class="label">Vaša poruka</label>
+            <textarea name="message" class= "textarea" id="" cols="30" rows="10" [(ngModel)]="message"></textarea>
+        </div>
+
+        <button type="submit" class="button">Pošalji!</button>
+
+
+        </form>
+    </div>
+</section>
