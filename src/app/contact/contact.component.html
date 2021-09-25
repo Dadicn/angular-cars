@@ -1,35 +1,29 @@
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">Kontaktirajte nas!</h1>
-        </div>
-    </div>
-</section>
 
-<section class="section">
-    <div class="container">
-       
-        
-        <form (ngSubmit)="submitForm()">
+<section class="contact">
+<div class="container">
+<p>Kontaktirajte nas! </p>
+<form class="example-form">
+    <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Ime</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl"  placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Molimo Vas unesite validnu e-mail adresu
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email je <strong>obavezan</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Poruka</mat-label>
+        <input matInput #message maxlength="256" placeholder="Imam pitanje u vezi...">
+        <mat-hint align="start"><strong>Nemojte otkrivati lične podatke</strong> </mat-hint>
+        <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+      </mat-form-field>
+  </form>
 
-        <div class="field">
-            <label class="label">Ime</label>
-            <input type="text" name="name" class="input" [(ngModel)]="name">
-        </div>
-
-        <div class="field">
-            <label class="label">Email</label>
-            <input type="email" name="email" class="input" [(ngModel)]="email">
-        </div>
-
-        <div class="field">
-            <label class="label">Vaša poruka</label>
-            <textarea name="message" class= "textarea" id="" cols="30" rows="10" [(ngModel)]="message"></textarea>
-        </div>
-
-        <button type="submit" class="button">Pošalji!</button>
-
-
-        </form>
-    </div>
+  </div>
 </section>

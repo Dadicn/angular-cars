@@ -8,9 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { GalleryCarouselComponent } from './gallery-carousel/gallery-carousel.component';
 import { TableComponent } from './table/table.component';
 import { ContactComponent } from './contact/contact.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,6 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     HomeComponent,
     GalleryComponent,
-    GalleryCarouselComponent,
     TableComponent,
     ContactComponent
   ],
@@ -27,7 +28,10 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
